@@ -1,4 +1,4 @@
-const API_URL = 'https://cli.redis.io',
+const API_URL = 'http://localhost:5000',
   PROMPT_PREFIX = 'redis:6379> ';
 
 async function createCli(cli) {
@@ -247,7 +247,7 @@ function formatReply(reply, indent = '') {
 
   const type = typeof reply;
   if (type === 'string') {
-    return `"${reply}"`;
+    return reply;
   } else if (type === 'number') {
     return `(integer) ${reply}`;
   } else if (Array.isArray(reply)) {
