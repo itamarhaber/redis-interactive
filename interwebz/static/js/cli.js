@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000',
+const API_URL = 'https://cli.redis.io',
   PROMPT_PREFIX = 'redis:6379> ';
 
 async function createCli(cli) {
